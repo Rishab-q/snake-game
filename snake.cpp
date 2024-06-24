@@ -13,7 +13,7 @@ int x, y;
 // Food coordinates 
 int fruitCordX, fruitCordY; 
 // variable to store the score of he player 
-int playerScore; 
+int score; 
 // Array to store the coordinates of snake tail (x-axis, 
 // y-axis) 
 int snakeTailX[100], snakeTailY[100]; 
@@ -35,13 +35,13 @@ void GameInit()
 	y = height / 2; 
 	fruitCordX = rand() % width; 
 	fruitCordY = rand() % height; 
-	playerScore = 0; 
+	score = 0; 
 } 
 
 // Function for creating the game board & rendering 
 void GameRender(string playerName) 
 { 
-	system("cls"); // Clear the console 
+	system("cls"); 
 
 	// Creating top walls with '-' 
 	for (int i = 0; i < width + 2; i++) 
@@ -82,7 +82,7 @@ void GameRender(string playerName)
 	cout << endl; 
 
 	// Display player's score 
-	cout << playerName << "'s Score: " << playerScore 
+	cout << playerName << "'s Score: " << score 
 		<< endl; 
 } 
 
